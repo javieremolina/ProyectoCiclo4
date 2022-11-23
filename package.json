@@ -8,9 +8,13 @@
     "ecommerce-back",
     "ecommerce-tech"
   ],
+  "engines": {
+    "node": ">=15.0.0"
+  },
   "scripts": {
-    "build": "npm run build --workspace=ecommerce-tech",
+    "build": "SKIP_PREFLIGHT_CHECK=true npm run build --workspace=ecommerce-tech",
     "start": "npm run start --workspace=ecommerce-back",
+    "lint":"eslint ./ecommerce-tech ./ecommerce-back",
     "dev:api": "npm run build && npm run dev --workspace=ecommerce-back"
   },
   "keywords": [],
@@ -20,6 +24,7 @@
     "standard": "17.0.0"
   },
   "eslintConfig": {
+    "ignorePatterns": ["build", "App.test.js"],
     "extends": "./node_modules/standard/eslintrc.json"
   },
   "dependencies": {
