@@ -56,6 +56,7 @@ export const ProductForm = () => {
         setCapacidad(res.principal.capacidad ? res.principal.capacidad : '')
         setCpu(res.principal.chip ? res.principal.chip : res.principal.cpu ? res.principal.cpu : '')
         setGpu(res.principal.gpu ? res.principal.gpu : '')
+        setContenido(res.contenido ? res.contenido : '')
       })
       .catch(err => console.log(err))
   }, [])
@@ -145,11 +146,7 @@ export const ProductForm = () => {
       imagenes
     }
 
-    console.log(newObject)
-
-    await productService.update(id, newObject)
-
-    navigate('/productos')
+    await productService.update(id, newObject).then(navigate('/productos'))
   }
 
   if (data.length === 0) {
