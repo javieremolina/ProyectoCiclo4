@@ -12,7 +12,7 @@
     "node": ">=15.0.0"
   },
   "scripts": {
-    "build": "SKIP_PREFLIGHT_CHECK=true npm run build --workspace=ecommerce-tech",
+    "build": "npm run build --workspace=ecommerce-tech",
     "start": "npm run start --workspace=ecommerce-back",
     "lint":"eslint ./ecommerce-tech ./ecommerce-back",
     "dev:api": "npm run build && npm run dev --workspace=ecommerce-back"
