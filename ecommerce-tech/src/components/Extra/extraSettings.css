@@ -1,0 +1,11 @@
+.setOverflow {
+  overflow: hidden;
+}
+
+.setOverflow:hover { 
+  overflow-y: scroll;
+}
+
+input::-ms-reveal, input::-ms-clear {
+  display: none;
+}

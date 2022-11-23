@@ -1,0 +1,29 @@
+{
+  "name": "ecommerce",
+  "package": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "ecommerce-back",
+    "ecommerce-tech"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=ecommerce-tech",
+    "start": "npm run start --workspace=ecommerce-back",
+    "dev:api": "npm run build && npm run dev --workspace=ecommerce-back"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "dependencies": {
+    "yup": "^0.32.11",
+    "yup-phone": "^1.3.2"
+  }
+}

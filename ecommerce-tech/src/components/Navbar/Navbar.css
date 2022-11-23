@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar{
+  display: flex;
+  height: 75px;
+  background-color: rgb(33,37,41);
+  padding: 0 150px;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 75px;
+}
+
+.nav-button{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 10px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.nav-button:hover{
+  transform: scale(1.05);
+  color: bisque;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.nav-paths{
+  display: flex;
+  justify-content: space-around;
+  min-width: 85%;
+}
+
+.nav-profile{
+  display: flex;
+  min-width: 15%;
+}
+
+.carrito>li, .home>li{
+  padding-top: 15px;
+}
